@@ -1,0 +1,110 @@
+2025-07-15 22:33:52,444 - [▶] TESLA Fold 1/5
+2025-07-15 22:33:52,871 - Fold 1 Epoch 1: Train Loss=0.6926, Val Loss=0.6984, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:53,140 - Fold 1 Epoch 2: Train Loss=0.6925, Val Loss=0.6996, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:53,372 - Fold 1 Epoch 3: Train Loss=0.6925, Val Loss=0.6983, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:53,614 - Fold 1 Epoch 4: Train Loss=0.6925, Val Loss=0.6957, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:53,865 - Fold 1 Epoch 5: Train Loss=0.6930, Val Loss=0.7003, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:54,142 - Fold 1 Epoch 6: Train Loss=0.6922, Val Loss=0.6961, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:54,387 - Fold 1 Epoch 7: Train Loss=0.6918, Val Loss=0.6976, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:54,615 - Fold 1 Epoch 8: Train Loss=0.6919, Val Loss=0.6975, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:54,840 - Fold 1 Epoch 9: Train Loss=0.6919, Val Loss=0.7001, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:55,053 - Fold 1 Epoch 10: Train Loss=0.6925, Val Loss=0.6980, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:55,258 - Fold 1 Epoch 11: Train Loss=0.6922, Val Loss=0.6985, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:55,490 - Fold 1 Epoch 12: Train Loss=0.6917, Val Loss=0.6962, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:55,716 - Fold 1 Epoch 13: Train Loss=0.6921, Val Loss=0.6991, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:55,935 - Fold 1 Epoch 14: Train Loss=0.6911, Val Loss=0.6923, Acc=0.4976, F1=0.6204
+2025-07-15 22:33:56,150 - Fold 1 Epoch 15: Train Loss=0.6920, Val Loss=0.6936, Acc=0.4976, F1=0.4902
+2025-07-15 22:33:56,358 - Fold 1 Epoch 16: Train Loss=0.6915, Val Loss=0.6969, Acc=0.4348, F1=0.0000
+2025-07-15 22:33:56,594 - Fold 1 Epoch 17: Train Loss=0.6912, Val Loss=0.6972, Acc=0.4928, F1=0.2553
+2025-07-15 22:33:56,822 - Fold 1 Epoch 18: Train Loss=0.6910, Val Loss=0.6974, Acc=0.4879, F1=0.5268
+2025-07-15 22:33:57,046 - Fold 1 Epoch 19: Train Loss=0.6911, Val Loss=0.6964, Acc=0.4831, F1=0.4780
+2025-07-15 22:33:57,331 - Fold 1 Epoch 20: Train Loss=0.6912, Val Loss=0.6922, Acc=0.5266, F1=0.6500
+2025-07-15 22:33:57,336 - [OK] Saved output/lstm/tesla/tesla_fold1.pth
+2025-07-15 22:33:57,336 - [▶] TESLA Fold 2/5
+2025-07-15 22:33:57,629 - Fold 2 Epoch 1: Train Loss=0.6935, Val Loss=0.6929, Acc=0.5459, F1=0.5766
+2025-07-15 22:33:57,863 - Fold 2 Epoch 2: Train Loss=0.6932, Val Loss=0.6935, Acc=0.5266, F1=0.6288
+2025-07-15 22:33:58,100 - Fold 2 Epoch 3: Train Loss=0.6931, Val Loss=0.6932, Acc=0.5072, F1=0.6016
+2025-07-15 22:33:58,316 - Fold 2 Epoch 4: Train Loss=0.6935, Val Loss=0.6934, Acc=0.5169, F1=0.6154
+2025-07-15 22:33:58,563 - Fold 2 Epoch 5: Train Loss=0.6933, Val Loss=0.6918, Acc=0.5217, F1=0.3694
+2025-07-15 22:33:58,783 - Fold 2 Epoch 6: Train Loss=0.6931, Val Loss=0.6916, Acc=0.5507, F1=0.4294
+2025-07-15 22:33:59,004 - Fold 2 Epoch 7: Train Loss=0.6930, Val Loss=0.6916, Acc=0.5507, F1=0.4294
+2025-07-15 22:33:59,199 - Fold 2 Epoch 8: Train Loss=0.6932, Val Loss=0.6914, Acc=0.5749, F1=0.4824
+2025-07-15 22:33:59,397 - Fold 2 Epoch 9: Train Loss=0.6939, Val Loss=0.6945, Acc=0.4831, F1=0.6192
+2025-07-15 22:33:59,593 - Fold 2 Epoch 10: Train Loss=0.6928, Val Loss=0.6925, Acc=0.5217, F1=0.5787
+2025-07-15 22:33:59,792 - Fold 2 Epoch 11: Train Loss=0.6928, Val Loss=0.6876, Acc=0.5507, F1=0.3758
+2025-07-15 22:33:59,987 - Fold 2 Epoch 12: Train Loss=0.6935, Val Loss=0.6947, Acc=0.4541, F1=0.6246
+2025-07-15 22:34:00,272 - Fold 2 Epoch 13: Train Loss=0.6931, Val Loss=0.6945, Acc=0.4541, F1=0.6246
+2025-07-15 22:34:00,530 - Fold 2 Epoch 14: Train Loss=0.6937, Val Loss=0.6951, Acc=0.4541, F1=0.6246
+2025-07-15 22:34:00,745 - Fold 2 Epoch 15: Train Loss=0.6933, Val Loss=0.6933, Acc=0.5072, F1=0.6165
+2025-07-15 22:34:00,967 - Fold 2 Epoch 16: Train Loss=0.6932, Val Loss=0.6932, Acc=0.5314, F1=0.6255
+2025-07-15 22:34:01,175 - Fold 2 Epoch 17: Train Loss=0.6931, Val Loss=0.6938, Acc=0.4831, F1=0.6165
+2025-07-15 22:34:01,384 - Fold 2 Epoch 18: Train Loss=0.6931, Val Loss=0.6935, Acc=0.5121, F1=0.6189
+2025-07-15 22:34:01,617 - Fold 2 Epoch 19: Train Loss=0.6930, Val Loss=0.6928, Acc=0.5072, F1=0.5920
+2025-07-15 22:34:01,847 - Fold 2 Epoch 20: Train Loss=0.6930, Val Loss=0.6930, Acc=0.5169, F1=0.6063
+2025-07-15 22:34:01,851 - [OK] Saved output/lstm/tesla/tesla_fold2.pth
+2025-07-15 22:34:01,852 - [▶] TESLA Fold 3/5
+2025-07-15 22:34:02,085 - Fold 3 Epoch 1: Train Loss=0.6930, Val Loss=0.6953, Acc=0.5121, F1=0.0000
+2025-07-15 22:34:02,284 - Fold 3 Epoch 2: Train Loss=0.6928, Val Loss=0.6955, Acc=0.4928, F1=0.1860
+2025-07-15 22:34:02,534 - Fold 3 Epoch 3: Train Loss=0.6925, Val Loss=0.6975, Acc=0.5024, F1=0.1890
+2025-07-15 22:34:02,765 - Fold 3 Epoch 4: Train Loss=0.6929, Val Loss=0.6995, Acc=0.5024, F1=0.0550
+2025-07-15 22:34:02,983 - Fold 3 Epoch 5: Train Loss=0.6920, Val Loss=0.6984, Acc=0.5121, F1=0.3567
+2025-07-15 22:34:03,200 - Fold 3 Epoch 6: Train Loss=0.6930, Val Loss=0.6979, Acc=0.4831, F1=0.4456
+2025-07-15 22:34:03,410 - Fold 3 Epoch 7: Train Loss=0.6921, Val Loss=0.6999, Acc=0.5121, F1=0.2171
+2025-07-15 22:34:03,660 - Fold 3 Epoch 8: Train Loss=0.6914, Val Loss=0.7018, Acc=0.5121, F1=0.2047
+2025-07-15 22:34:03,877 - Fold 3 Epoch 9: Train Loss=0.6918, Val Loss=0.7063, Acc=0.5362, F1=0.3846
+2025-07-15 22:34:04,105 - Fold 3 Epoch 10: Train Loss=0.6905, Val Loss=0.7143, Acc=0.5266, F1=0.2344
+2025-07-15 22:34:04,314 - Fold 3 Epoch 11: Train Loss=0.6906, Val Loss=0.7041, Acc=0.5362, F1=0.3924
+2025-07-15 22:34:04,545 - Fold 3 Epoch 12: Train Loss=0.6898, Val Loss=0.7084, Acc=0.5314, F1=0.2595
+2025-07-15 22:34:04,764 - Fold 3 Epoch 13: Train Loss=0.6911, Val Loss=0.7000, Acc=0.4493, F1=0.5210
+2025-07-15 22:34:04,972 - Fold 3 Epoch 14: Train Loss=0.6915, Val Loss=0.6980, Acc=0.4638, F1=0.4977
+2025-07-15 22:34:05,184 - Fold 3 Epoch 15: Train Loss=0.6908, Val Loss=0.6999, Acc=0.5217, F1=0.3613
+2025-07-15 22:34:05,391 - Fold 3 Epoch 16: Train Loss=0.6905, Val Loss=0.7019, Acc=0.5362, F1=0.3766
+2025-07-15 22:34:05,623 - Fold 3 Epoch 17: Train Loss=0.6897, Val Loss=0.7042, Acc=0.5266, F1=0.4235
+2025-07-15 22:34:05,840 - Fold 3 Epoch 18: Train Loss=0.6902, Val Loss=0.7074, Acc=0.5604, F1=0.3810
+2025-07-15 22:34:06,057 - Fold 3 Epoch 19: Train Loss=0.6898, Val Loss=0.7068, Acc=0.5604, F1=0.3810
+2025-07-15 22:34:06,269 - Fold 3 Epoch 20: Train Loss=0.6897, Val Loss=0.7118, Acc=0.5459, F1=0.4337
+2025-07-15 22:34:06,274 - [OK] Saved output/lstm/tesla/tesla_fold3.pth
+2025-07-15 22:34:06,275 - [▶] TESLA Fold 4/5
+2025-07-15 22:34:06,523 - Fold 4 Epoch 1: Train Loss=0.6949, Val Loss=0.6926, Acc=0.5411, F1=0.0000
+2025-07-15 22:34:06,761 - Fold 4 Epoch 2: Train Loss=0.6941, Val Loss=0.6933, Acc=0.4638, F1=0.3584
+2025-07-15 22:34:06,986 - Fold 4 Epoch 3: Train Loss=0.6933, Val Loss=0.6927, Acc=0.5411, F1=0.0000
+2025-07-15 22:34:07,207 - Fold 4 Epoch 4: Train Loss=0.6934, Val Loss=0.6912, Acc=0.5411, F1=0.0000
+2025-07-15 22:34:07,427 - Fold 4 Epoch 5: Train Loss=0.6937, Val Loss=0.6917, Acc=0.5556, F1=0.2069
+2025-07-15 22:34:07,647 - Fold 4 Epoch 6: Train Loss=0.6936, Val Loss=0.6937, Acc=0.4589, F1=0.6291
+2025-07-15 22:34:07,918 - Fold 4 Epoch 7: Train Loss=0.6932, Val Loss=0.6904, Acc=0.5459, F1=0.0208
+2025-07-15 22:34:08,158 - Fold 4 Epoch 8: Train Loss=0.6929, Val Loss=0.6893, Acc=0.5507, F1=0.4497
+2025-07-15 22:34:08,379 - Fold 4 Epoch 9: Train Loss=0.6926, Val Loss=0.6890, Acc=0.5797, F1=0.5837
+2025-07-15 22:34:08,629 - Fold 4 Epoch 10: Train Loss=0.6927, Val Loss=0.6821, Acc=0.5797, F1=0.5397
+2025-07-15 22:34:08,849 - Fold 4 Epoch 11: Train Loss=0.6927, Val Loss=0.6833, Acc=0.5797, F1=0.5672
+2025-07-15 22:34:09,065 - Fold 4 Epoch 12: Train Loss=0.6909, Val Loss=0.6706, Acc=0.5797, F1=0.4852
+2025-07-15 22:34:09,274 - Fold 4 Epoch 13: Train Loss=0.6899, Val Loss=0.6860, Acc=0.5652, F1=0.6281
+2025-07-15 22:34:09,514 - Fold 4 Epoch 14: Train Loss=0.6918, Val Loss=0.6784, Acc=0.5749, F1=0.5556
+2025-07-15 22:34:09,746 - Fold 4 Epoch 15: Train Loss=0.6896, Val Loss=0.6729, Acc=0.5700, F1=0.5389
+2025-07-15 22:34:10,027 - Fold 4 Epoch 16: Train Loss=0.6899, Val Loss=0.6750, Acc=0.5700, F1=0.5528
+2025-07-15 22:34:10,261 - Fold 4 Epoch 17: Train Loss=0.6903, Val Loss=0.6774, Acc=0.5797, F1=0.5628
+2025-07-15 22:34:10,527 - Fold 4 Epoch 18: Train Loss=0.6896, Val Loss=0.6767, Acc=0.5652, F1=0.5408
+2025-07-15 22:34:10,766 - Fold 4 Epoch 19: Train Loss=0.6887, Val Loss=0.6769, Acc=0.5700, F1=0.5572
+2025-07-15 22:34:10,990 - Fold 4 Epoch 20: Train Loss=0.6924, Val Loss=0.6773, Acc=0.5845, F1=0.6091
+2025-07-15 22:34:10,994 - [OK] Saved output/lstm/tesla/tesla_fold4.pth
+2025-07-15 22:34:10,995 - [▶] TESLA Fold 5/5
+2025-07-15 22:34:11,226 - Fold 5 Epoch 1: Train Loss=0.6953, Val Loss=0.6931, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:11,458 - Fold 5 Epoch 2: Train Loss=0.6933, Val Loss=0.6929, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:11,692 - Fold 5 Epoch 3: Train Loss=0.6932, Val Loss=0.6926, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:11,983 - Fold 5 Epoch 4: Train Loss=0.6933, Val Loss=0.6925, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:12,205 - Fold 5 Epoch 5: Train Loss=0.6930, Val Loss=0.6924, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:12,444 - Fold 5 Epoch 6: Train Loss=0.6932, Val Loss=0.6923, Acc=0.5024, F1=0.0374
+2025-07-15 22:34:12,658 - Fold 5 Epoch 7: Train Loss=0.6931, Val Loss=0.6921, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:12,890 - Fold 5 Epoch 8: Train Loss=0.6930, Val Loss=0.6921, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:13,111 - Fold 5 Epoch 9: Train Loss=0.6930, Val Loss=0.6919, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:13,318 - Fold 5 Epoch 10: Train Loss=0.6927, Val Loss=0.6916, Acc=0.5652, F1=0.3182
+2025-07-15 22:34:13,555 - Fold 5 Epoch 11: Train Loss=0.6935, Val Loss=0.6916, Acc=0.5411, F1=0.4809
+2025-07-15 22:34:13,771 - Fold 5 Epoch 12: Train Loss=0.6930, Val Loss=0.6919, Acc=0.5362, F1=0.4725
+2025-07-15 22:34:13,997 - Fold 5 Epoch 13: Train Loss=0.6928, Val Loss=0.6918, Acc=0.5604, F1=0.3453
+2025-07-15 22:34:14,216 - Fold 5 Epoch 14: Train Loss=0.6926, Val Loss=0.6917, Acc=0.5024, F1=0.0000
+2025-07-15 22:34:14,450 - Fold 5 Epoch 15: Train Loss=0.6928, Val Loss=0.6913, Acc=0.5314, F1=0.4192
+2025-07-15 22:34:14,669 - Fold 5 Epoch 16: Train Loss=0.6929, Val Loss=0.6912, Acc=0.5072, F1=0.0192
+2025-07-15 22:34:14,883 - Fold 5 Epoch 17: Train Loss=0.6928, Val Loss=0.6909, Acc=0.5459, F1=0.3649
+2025-07-15 22:34:15,098 - Fold 5 Epoch 18: Train Loss=0.6928, Val Loss=0.6905, Acc=0.5507, F1=0.5181
+2025-07-15 22:34:15,311 - Fold 5 Epoch 19: Train Loss=0.6925, Val Loss=0.6902, Acc=0.5314, F1=0.3899
+2025-07-15 22:34:15,548 - Fold 5 Epoch 20: Train Loss=0.6923, Val Loss=0.6891, Acc=0.5556, F1=0.5158
+2025-07-15 22:34:15,552 - [OK] Saved output/lstm/tesla/tesla_fold5.pth

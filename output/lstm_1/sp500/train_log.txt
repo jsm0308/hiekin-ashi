@@ -1,0 +1,110 @@
+2025-07-15 22:33:04,763 - [▶] SP500 Fold 1/5
+2025-07-15 22:33:09,949 - Fold 1 Epoch 1: Train Loss=0.6861, Val Loss=0.6586, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:10,166 - Fold 1 Epoch 2: Train Loss=0.6853, Val Loss=0.6584, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:10,407 - Fold 1 Epoch 3: Train Loss=0.6851, Val Loss=0.6570, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:10,637 - Fold 1 Epoch 4: Train Loss=0.6854, Val Loss=0.6586, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:10,850 - Fold 1 Epoch 5: Train Loss=0.6849, Val Loss=0.6563, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:11,254 - Fold 1 Epoch 6: Train Loss=0.6853, Val Loss=0.6564, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:11,491 - Fold 1 Epoch 7: Train Loss=0.6851, Val Loss=0.6559, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:11,687 - Fold 1 Epoch 8: Train Loss=0.6848, Val Loss=0.6597, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:11,945 - Fold 1 Epoch 9: Train Loss=0.6846, Val Loss=0.6571, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:12,147 - Fold 1 Epoch 10: Train Loss=0.6851, Val Loss=0.6557, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:12,365 - Fold 1 Epoch 11: Train Loss=0.6845, Val Loss=0.6562, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:12,583 - Fold 1 Epoch 12: Train Loss=0.6850, Val Loss=0.6571, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:12,785 - Fold 1 Epoch 13: Train Loss=0.6850, Val Loss=0.6562, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:12,990 - Fold 1 Epoch 14: Train Loss=0.6855, Val Loss=0.6556, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:13,194 - Fold 1 Epoch 15: Train Loss=0.6847, Val Loss=0.6589, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:13,421 - Fold 1 Epoch 16: Train Loss=0.6850, Val Loss=0.6560, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:13,647 - Fold 1 Epoch 17: Train Loss=0.6849, Val Loss=0.6582, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:13,844 - Fold 1 Epoch 18: Train Loss=0.6853, Val Loss=0.6553, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:14,041 - Fold 1 Epoch 19: Train Loss=0.6846, Val Loss=0.6574, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:14,222 - Fold 1 Epoch 20: Train Loss=0.6849, Val Loss=0.6579, Acc=0.6618, F1=0.7965
+2025-07-15 22:33:14,232 - [OK] Saved output/lstm/sp500/sp500_fold1.pth
+2025-07-15 22:33:14,232 - [▶] SP500 Fold 2/5
+2025-07-15 22:33:14,448 - Fold 2 Epoch 1: Train Loss=0.6782, Val Loss=0.7252, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:14,645 - Fold 2 Epoch 2: Train Loss=0.6723, Val Loss=0.7267, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:14,849 - Fold 2 Epoch 3: Train Loss=0.6718, Val Loss=0.7263, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:15,039 - Fold 2 Epoch 4: Train Loss=0.6721, Val Loss=0.7236, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:15,253 - Fold 2 Epoch 5: Train Loss=0.6711, Val Loss=0.7339, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:15,480 - Fold 2 Epoch 6: Train Loss=0.6716, Val Loss=0.7211, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:15,684 - Fold 2 Epoch 7: Train Loss=0.6722, Val Loss=0.7239, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:15,881 - Fold 2 Epoch 8: Train Loss=0.6716, Val Loss=0.7207, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:16,066 - Fold 2 Epoch 9: Train Loss=0.6712, Val Loss=0.7274, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:16,259 - Fold 2 Epoch 10: Train Loss=0.6705, Val Loss=0.7235, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:16,480 - Fold 2 Epoch 11: Train Loss=0.6710, Val Loss=0.7215, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:16,699 - Fold 2 Epoch 12: Train Loss=0.6718, Val Loss=0.7258, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:16,893 - Fold 2 Epoch 13: Train Loss=0.6719, Val Loss=0.7251, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:17,081 - Fold 2 Epoch 14: Train Loss=0.6710, Val Loss=0.7246, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:17,286 - Fold 2 Epoch 15: Train Loss=0.6715, Val Loss=0.7273, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:17,516 - Fold 2 Epoch 16: Train Loss=0.6713, Val Loss=0.7242, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:17,731 - Fold 2 Epoch 17: Train Loss=0.6711, Val Loss=0.7192, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:17,927 - Fold 2 Epoch 18: Train Loss=0.6712, Val Loss=0.7300, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:18,122 - Fold 2 Epoch 19: Train Loss=0.6715, Val Loss=0.7291, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:18,316 - Fold 2 Epoch 20: Train Loss=0.6707, Val Loss=0.7261, Acc=0.4734, F1=0.6426
+2025-07-15 22:33:18,320 - [OK] Saved output/lstm/sp500/sp500_fold2.pth
+2025-07-15 22:33:18,320 - [▶] SP500 Fold 3/5
+2025-07-15 22:33:18,587 - Fold 3 Epoch 1: Train Loss=0.6827, Val Loss=0.6891, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:18,771 - Fold 3 Epoch 2: Train Loss=0.6789, Val Loss=0.6919, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:18,972 - Fold 3 Epoch 3: Train Loss=0.6786, Val Loss=0.6890, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:19,157 - Fold 3 Epoch 4: Train Loss=0.6787, Val Loss=0.6907, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:19,339 - Fold 3 Epoch 5: Train Loss=0.6787, Val Loss=0.6899, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:19,550 - Fold 3 Epoch 6: Train Loss=0.6785, Val Loss=0.6914, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:19,756 - Fold 3 Epoch 7: Train Loss=0.6787, Val Loss=0.6907, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:19,939 - Fold 3 Epoch 8: Train Loss=0.6781, Val Loss=0.6891, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:20,135 - Fold 3 Epoch 9: Train Loss=0.6799, Val Loss=0.6895, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:20,325 - Fold 3 Epoch 10: Train Loss=0.6787, Val Loss=0.6889, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:20,531 - Fold 3 Epoch 11: Train Loss=0.6785, Val Loss=0.6896, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:20,722 - Fold 3 Epoch 12: Train Loss=0.6783, Val Loss=0.6903, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:20,913 - Fold 3 Epoch 13: Train Loss=0.6779, Val Loss=0.6894, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:21,100 - Fold 3 Epoch 14: Train Loss=0.6778, Val Loss=0.6909, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:21,287 - Fold 3 Epoch 15: Train Loss=0.6784, Val Loss=0.6895, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:21,495 - Fold 3 Epoch 16: Train Loss=0.6780, Val Loss=0.6902, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:21,679 - Fold 3 Epoch 17: Train Loss=0.6787, Val Loss=0.6899, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:21,876 - Fold 3 Epoch 18: Train Loss=0.6782, Val Loss=0.6895, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:22,091 - Fold 3 Epoch 19: Train Loss=0.6785, Val Loss=0.6903, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:22,303 - Fold 3 Epoch 20: Train Loss=0.6783, Val Loss=0.6895, Acc=0.5556, F1=0.7143
+2025-07-15 22:33:22,307 - [OK] Saved output/lstm/sp500/sp500_fold3.pth
+2025-07-15 22:33:22,308 - [▶] SP500 Fold 4/5
+2025-07-15 22:33:22,651 - Fold 4 Epoch 1: Train Loss=0.6844, Val Loss=0.6654, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:22,933 - Fold 4 Epoch 2: Train Loss=0.6832, Val Loss=0.6641, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:23,123 - Fold 4 Epoch 3: Train Loss=0.6833, Val Loss=0.6637, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:23,309 - Fold 4 Epoch 4: Train Loss=0.6830, Val Loss=0.6635, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:23,592 - Fold 4 Epoch 5: Train Loss=0.6841, Val Loss=0.6648, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:23,788 - Fold 4 Epoch 6: Train Loss=0.6845, Val Loss=0.6614, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:23,987 - Fold 4 Epoch 7: Train Loss=0.6833, Val Loss=0.6654, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:24,172 - Fold 4 Epoch 8: Train Loss=0.6831, Val Loss=0.6658, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:24,368 - Fold 4 Epoch 9: Train Loss=0.6830, Val Loss=0.6633, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:24,571 - Fold 4 Epoch 10: Train Loss=0.6832, Val Loss=0.6624, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:24,769 - Fold 4 Epoch 11: Train Loss=0.6835, Val Loss=0.6634, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:24,951 - Fold 4 Epoch 12: Train Loss=0.6832, Val Loss=0.6629, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:25,136 - Fold 4 Epoch 13: Train Loss=0.6834, Val Loss=0.6635, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:25,317 - Fold 4 Epoch 14: Train Loss=0.6829, Val Loss=0.6638, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:25,524 - Fold 4 Epoch 15: Train Loss=0.6834, Val Loss=0.6647, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:25,715 - Fold 4 Epoch 16: Train Loss=0.6832, Val Loss=0.6661, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:25,915 - Fold 4 Epoch 17: Train Loss=0.6830, Val Loss=0.6646, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:26,114 - Fold 4 Epoch 18: Train Loss=0.6839, Val Loss=0.6615, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:26,301 - Fold 4 Epoch 19: Train Loss=0.6836, Val Loss=0.6638, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:26,513 - Fold 4 Epoch 20: Train Loss=0.6837, Val Loss=0.6649, Acc=0.6425, F1=0.7824
+2025-07-15 22:33:26,517 - [OK] Saved output/lstm/sp500/sp500_fold4.pth
+2025-07-15 22:33:26,518 - [▶] SP500 Fold 5/5
+2025-07-15 22:33:26,716 - Fold 5 Epoch 1: Train Loss=0.6897, Val Loss=0.6769, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:26,916 - Fold 5 Epoch 2: Train Loss=0.6816, Val Loss=0.6779, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:27,146 - Fold 5 Epoch 3: Train Loss=0.6808, Val Loss=0.6770, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:27,499 - Fold 5 Epoch 4: Train Loss=0.6813, Val Loss=0.6770, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:27,685 - Fold 5 Epoch 5: Train Loss=0.6803, Val Loss=0.6772, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:27,875 - Fold 5 Epoch 6: Train Loss=0.6812, Val Loss=0.6770, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:28,059 - Fold 5 Epoch 7: Train Loss=0.6815, Val Loss=0.6770, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:28,241 - Fold 5 Epoch 8: Train Loss=0.6815, Val Loss=0.6779, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:28,448 - Fold 5 Epoch 9: Train Loss=0.6813, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:28,645 - Fold 5 Epoch 10: Train Loss=0.6803, Val Loss=0.6772, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:28,840 - Fold 5 Epoch 11: Train Loss=0.6807, Val Loss=0.6772, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:29,035 - Fold 5 Epoch 12: Train Loss=0.6807, Val Loss=0.6772, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:29,229 - Fold 5 Epoch 13: Train Loss=0.6813, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:29,427 - Fold 5 Epoch 14: Train Loss=0.6809, Val Loss=0.6774, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:29,615 - Fold 5 Epoch 15: Train Loss=0.6807, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:29,801 - Fold 5 Epoch 16: Train Loss=0.6809, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:29,983 - Fold 5 Epoch 17: Train Loss=0.6804, Val Loss=0.6772, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:30,175 - Fold 5 Epoch 18: Train Loss=0.6804, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:30,376 - Fold 5 Epoch 19: Train Loss=0.6804, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:30,592 - Fold 5 Epoch 20: Train Loss=0.6804, Val Loss=0.6771, Acc=0.5845, F1=0.7378
+2025-07-15 22:33:30,597 - [OK] Saved output/lstm/sp500/sp500_fold5.pth

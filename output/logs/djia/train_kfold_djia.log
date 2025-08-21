@@ -1,0 +1,34 @@
+2025-07-20 01:59:51,060 - INFO - ===== Ticker: djia =====
+2025-07-20 01:59:51,060 - INFO - Loading data from data/processed/ha_close_only/djia_ha_close_only.csv
+2025-07-20 01:59:51,091 - INFO - ===== Fold 1/5 =====
+2025-07-20 01:59:52,078 - INFO - [Fold 1] Epoch 1/30 - Train Loss: 0.6904
+2025-07-20 01:59:52,654 - INFO - [Fold 1] Epoch 2/30 - Train Loss: 0.6897
+2025-07-20 01:59:53,107 - INFO - [Fold 1] Epoch 3/30 - Train Loss: 0.6893
+2025-07-20 01:59:53,573 - INFO - [Fold 1] Epoch 4/30 - Train Loss: 0.6896
+2025-07-20 01:59:54,044 - INFO - [Fold 1] Epoch 5/30 - Train Loss: 0.6901
+2025-07-20 01:59:54,711 - INFO - [Fold 1] Epoch 6/30 - Train Loss: 0.6894
+2025-07-20 01:59:55,366 - INFO - [Fold 1] Epoch 7/30 - Train Loss: 0.6892
+2025-07-20 01:59:55,980 - INFO - [Fold 1] Epoch 8/30 - Train Loss: 0.6896
+2025-07-20 01:59:56,502 - INFO - [Fold 1] Epoch 9/30 - Train Loss: 0.6889
+2025-07-20 01:59:56,977 - INFO - [Fold 1] Epoch 10/30 - Train Loss: 0.6888
+2025-07-20 01:59:57,513 - INFO - [Fold 1] Epoch 11/30 - Train Loss: 0.6889
+2025-07-20 01:59:58,030 - INFO - [Fold 1] Epoch 12/30 - Train Loss: 0.6889
+2025-07-20 01:59:58,554 - INFO - [Fold 1] Epoch 13/30 - Train Loss: 0.6884
+2025-07-20 01:59:59,062 - INFO - [Fold 1] Epoch 14/30 - Train Loss: 0.6862
+2025-07-20 01:59:59,747 - INFO - [Fold 1] Epoch 15/30 - Train Loss: 0.6889
+2025-07-20 02:00:00,321 - INFO - [Fold 1] Epoch 16/30 - Train Loss: 0.6887
+2025-07-20 02:00:00,842 - INFO - [Fold 1] Epoch 17/30 - Train Loss: 0.6887
+2025-07-20 02:00:01,350 - INFO - [Fold 1] Epoch 18/30 - Train Loss: 0.6884
+2025-07-20 02:00:01,861 - INFO - [Fold 1] Epoch 19/30 - Train Loss: 0.6884
+2025-07-20 02:00:02,373 - INFO - [Fold 1] Epoch 20/30 - Train Loss: 0.6877
+2025-07-20 02:00:02,881 - INFO - [Fold 1] Epoch 21/30 - Train Loss: 0.6913
+2025-07-20 02:00:03,392 - INFO - [Fold 1] Epoch 22/30 - Train Loss: 0.6890
+2025-07-20 02:00:03,915 - INFO - [Fold 1] Epoch 23/30 - Train Loss: 0.6890
+2025-07-20 02:00:04,534 - INFO - [Fold 1] Epoch 24/30 - Train Loss: 0.6893
+2025-07-20 02:00:05,171 - INFO - [Fold 1] Epoch 25/30 - Train Loss: 0.6891
+2025-07-20 02:00:05,676 - INFO - [Fold 1] Epoch 26/30 - Train Loss: 0.6892
+2025-07-20 02:00:06,173 - INFO - [Fold 1] Epoch 27/30 - Train Loss: 0.6892
+2025-07-20 02:00:06,658 - INFO - [Fold 1] Epoch 28/30 - Train Loss: 0.6893
+2025-07-20 02:00:07,153 - INFO - [Fold 1] Epoch 29/30 - Train Loss: 0.6888
+2025-07-20 02:00:07,680 - INFO - [Fold 1] Epoch 30/30 - Train Loss: 0.6890
+2025-07-20 02:00:07,681 - INFO - ===== Fold 2/5 =====
