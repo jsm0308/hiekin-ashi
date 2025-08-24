@@ -1,0 +1,8 @@
+pandas
+numpy
+yfinance
+pyyaml
+ta
+scikit-learn
+torch
+optuna  

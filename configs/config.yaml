@@ -1,0 +1,101 @@
+# 📂 데이터 설정
+data:
+  # 피처 생성에 필요한 모든 데이터 (외부 지표 포함)
+  tickers: ['SPY', 'QQQ', 'VIXY', 'TLT', 'GLD']
+  # 최종적으로 피처를 생성하고 학습할 타겟 지수
+  target_tickers: ['SPY', 'QQQ']
+  optimization_target: 'SPY' 
+  start_date: '2010-01-01'
+  end_date: '2025-07-31'
+  raw_path: 'data/raw'
+  processed_path: 'data/processed'
+  window_size: 20
+
+# 🤖 모델 설정
+model:
+  input_size: 15
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.4
+  num_classes: 2 # 0: 하락, 1: 상승
+
+# 💡 학습 설정
+training:
+  learning_rate: 0.001
+  epochs: 100
+  batch_size: 64
+  early_stopping_patience: 10
+  # 데이터 분할 날짜 (시계열 데이터는 날짜로 잘라야 함)
+  train_end_date: '2021-12-31'
+  validation_end_date: '2023-12-31'
+
+# 📈 결과 및 산출물 설정
+output:
+  model_path: 'models/best_model.pth' # 모델 저장 기본 경로
+  results_path: 'results'           # 결과 파일 저장 경로# 📂 데이터 설정
+data:
+  # 피처 생성에 필요한 모든 데이터 (외부 지표 포함)
+  tickers: ['SPY', 'QQQ', 'VIXY', 'TLT', 'GLD']
+  # 최종적으로 피처를 생성하고 학습할 타겟 지수
+  target_tickers: ['SPY', 'QQQ']
+  start_date: '2010-01-01'
+  end_date: '2025-07-31'
+  raw_path: 'data/raw'
+  processed_path: 'data/processed'
+  window_size: 20
+
+# 🤖 모델 설정
+model:
+  input_size: 15# 📂 데이터 설정
+data:
+  # 피처 생성에 필요한 모든 데이터 (외부 지표 포함)
+  tickers: ['SPY', 'QQQ', 'VIXY', 'TLT', 'GLD']
+  # 최종적으로 피처를 생성하고 학습할 타겟 지수
+  target_tickers: ['SPY', 'QQQ']
+  start_date: '2010-01-01'
+  end_date: '2025-07-31'
+  raw_path: 'data/raw'
+  processed_path: 'data/processed'
+  window_size: 20
+
+# 🤖 모델 설정
+model:
+  input_size: 15
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.4
+  num_classes: 2 # 0: 하락, 1: 상승
+
+# 💡 학습 설정
+training:
+  learning_rate: 0.001
+  epochs: 100
+  batch_size: 64
+  early_stopping_patience: 10
+  # 데이터 분할 날짜 (시계열 데이터는 날짜로 잘라야 함)
+  train_end_date: '2021-12-31'
+  validation_end_date: '2023-12-31'
+
+# 📈 결과 및 산출물 설정
+output:
+  model_path: 'models/best_model.pth' # 모델 저장 기본 경로
+  results_path: 'results'           # 결과 파일 저장 경로
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.4
+  num_classes: 2 # 0: 하락, 1: 상승
+
+# 💡 학습 설정
+training:
+  learning_rate: 0.001
+  epochs: 100
+  batch_size: 64
+  early_stopping_patience: 10
+  # 데이터 분할 날짜 (시계열 데이터는 날짜로 잘라야 함)
+  train_end_date: '2021-12-31'
+  validation_end_date: '2023-12-31'
+
+# 📈 결과 및 산출물 설정
+output:
+  model_path: 'models/best_model.pth' # 모델 저장 기본 경로
+  results_path: 'results'           # 결과 파일 저장 경로
