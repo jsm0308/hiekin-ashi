@@ -5,8 +5,9 @@ import yaml
 from ta import add_all_ta_features # 기술적 지표 라이브러리 (pip install ta)
 from src.utils import convert_to_ha
 
-# 설정 파일 로드
-with open('config.yaml', 'r') as file:
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_CONFIG = os.path.join(_ROOT, 'configs', 'config.yaml')
+with open(_CONFIG, 'r', encoding='utf-8') as file:
     config = yaml.safe_load(file)
 
 # 설정값

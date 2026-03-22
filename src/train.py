@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import torch
@@ -9,8 +10,9 @@ from src.model import BiGRUAttentionNet
 # (이 스크립트는 Colab에서 실행하는 것을 권장합니다)
 
 def run_training():
-    # 1. 설정 및 데이터 로드
-    with open('config.yaml', 'r') as file:
+    _root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    _config_path = os.path.join(_root, 'configs', 'config.yaml')
+    with open(_config_path, 'r', encoding='utf-8') as file:
         config = yaml.safe_load(file)
         
     df = pd.read_csv(os.path.join(config['data']['processed_path'], config['data']['master_file']), parse_dates=['Date'])

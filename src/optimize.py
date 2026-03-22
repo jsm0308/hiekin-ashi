@@ -32,7 +32,8 @@ def create_sequences(features, labels, window_size):
 # --- Optuna Objective 함수 ---
 def objective(trial):
     # 1. 설정 로드
-    with open('config.yaml', 'r', encoding='utf-8') as file:
+    config_path = os.path.join(project_root, 'configs', 'config.yaml')
+    with open(config_path, 'r', encoding='utf-8') as file:
         config = yaml.safe_load(file)
     
     target_ticker = config['data']['optimization_target']
