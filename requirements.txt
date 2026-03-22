@@ -5,4 +5,5 @@ pyyaml
 ta
 scikit-learn
 torch
-optuna  
+optuna
+matplotlib

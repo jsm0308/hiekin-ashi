@@ -1,97 +1,96 @@
 # hiekin-ashi
 
-**Heikin-Ashi 기반 BiGRU + Attention 시계열 분류 (SPY·QQQ 중심)**
+**Heikin-Ashi 기반 시계열 분류 — BiGRU + Attention**
 
 ---
 
-## 1. 개요 (Summary)
+## 1. 개요
 
-이 프로젝트는 Heikin-Ashi 캔들 구조를 기반으로 S&P500(SPY), NASDAQ100(QQQ) 등 대표 시장 지수를 학습해 다음 봉 방향(상승/하락)을 예측하는 딥러닝 파이프라인이다. 데이터 수집·전처리·피처 생성·모델·하이퍼파라미터 탐색까지 한 저장소에서 재현할 수 있도록 구성했다.
+**Heikin-Ashi(平均足)** 는 일반 OHLC와 달리 시가·종가를 이전 봉과 평균 내어 캔들을 다시 그리는 방식으로, 일봉의 노이즈를 줄이고 추세를 읽기 쉽게 만드는 표현이다. 본 프로젝트는 이 Heikin-Ashi 캔들과 기술적 지표·보조 시계열을 묶어 **다음 봉 방향(상승/하락)** 을 이진 분류하는 파이프라인이다. S&P500(SPY)·NASDAQ100(QQQ) 등 대표 지수를 중심으로 데이터·전처리·모델·실험을 한 저장소에서 맞춰 두었다.
 
-기획·데이터·모델·실험 전 과정을 단독으로 수행했으며, “피처를 많이 넣으면 된다”는 가정에서 벗어나 도메인·데이터 검증·파이프라인 이해의 순서를 체득하는 데 초점을 둔 개인 프로젝트다.
+기획부터 실험까지 단독으로 진행했으며, 피처만 늘리는 접근에서 벗어나 도메인·데이터 검증·시계열 누수 관리의 순서를 익히는 데 초점을 둔 개인 프로젝트다.
 
-### 배경 · 문제 인식
+### 문제 인식
 
-초기에는 여러 지수·개별 종목을 무작위로 수집해 학습했으나, 피처와 타깃 선정이 불명확해 모델이 안정적으로 학습하지 못했다. “데이터가 많다고 문제가 풀리지는 않는다”는 점을 체감한 뒤, 외생 변수 영향이 큰 개별 종목 대신 시장 전체 흐름을 반영하는 **SPY·QQQ** 중심으로 범위를 좁혔고, 그 이후부터 의미 있는 학습 곡선을 확인할 수 있었다.
+초기에는 여러 지수·개별 종목을 넓게 모아 학습했으나 타깃·피처 정의가 흔들려 학습이 안정적이지 않았다. 범위를 **SPY·QQQ 등 대표 지수** 로 좁힌 뒤에야 실험이 정리되었다.
 
-### 본 프로젝트의 방향
+### 방향
 
-- **대표 지수 중심**: 학습·실험 단위를 SPY/QQQ 등으로 고정해 노이즈와 스코프를 관리한다.
-- **Heikin-Ashi + 기술적 지표**: 캔들 스무딩과 RSI·MACD·볼린저 등 조합으로 입력 피처를 구성한다.
-- **시계열 분할·검증**: 날짜 기준 Train / Validation / Test로 누수를 피한다.
+- 대표 지수 중심으로 학습 단위를 고정한다.
+- Heikin-Ashi와 기술적 지표를 조합해 입력을 구성한다.
+- 날짜 기준 Train / Validation / Test로 시계열 누수를 피한다.
 
-### 모델·시스템 요약
+### 요약
 
-- **원천 데이터**: `yfinance`로 OHLCV 수집 후 CSV로 저장 (`configs/config.yaml`의 기간·티커 설정).
-- **피처**: SPY 기준 Heikin-Ashi 변환, `ta` 기반 지표, VIXY·TLT·GLD 등 보조 시계열 변화율·비율 피처.
-- **모델**: 양방향 GRU + Attention + 분류 헤드 (`src/model.py`).
-- **튜닝**: Optuna로 검증 F1 기준 하이퍼파라미터 탐색 (`src/optimize.py`).
+`yfinance`로 OHLCV를 받아 CSV에 저장하고, SPY 기준 HA 변환·`ta` 지표·VIXY·TLT·GLD 등 피처를 만든 뒤 BiGRU+Attention으로 분류한다. 하이퍼파라미터는 Optuna로 탐색한다.
 
 ---
 
-## 2. 기술 스택 (Tech Stack)
+## 2. 기술 스택
 
 | 구분 | 기술 |
 |------|------|
-| **Vision & AI** | — (본 프로젝트는 금융 시계열; 이미지/Vision 미사용) |
-| **Backend / Infra** | Python 3, YAML 설정 |
-| **Model** | PyTorch, BiGRU + Attention, Optuna |
-| **기타** | pandas, NumPy, scikit-learn, yfinance, `ta` |
+| 시계열·데이터 | Python, pandas, NumPy, yfinance, YAML |
+| 모델·학습 | PyTorch, BiGRU, Attention, scikit-learn, Optuna |
+| 지표·특성 | `ta` (RSI·MACD·볼린저 등) |
 
 ---
 
-## 3. 시스템 파이프라인 (System Pipeline)
+## 3. 시스템 파이프라인
 
-1. **데이터 다운로드**: `yfinance`로 티커별 OHLCV를 `data/raw/`에 저장.
-2. **Heikin-Ashi·지표**: SPY 기준 HA 캔들 및 기술적 지표, 보조 티커 피처 결합.
-3. **라벨링**: 다음 봉 Heikin-Ashi 종가 vs 시가 기준 이진 라벨.
-4. **학습·검증**: 시계열 분할 후 시퀀스 윈도우·정규화·DataLoader 구성 (`src/train.py`).
-5. **하이퍼파라미터 탐색**: Optuna로 학습률·은닉 크기·드롭아웃 등 탐색 (`src/optimize.py`).
+1. 티커별 OHLCV 다운로드 → `data/raw/` CSV
+2. Heikin-Ashi 변환 및 기술적 지표, 보조 티커 피처 결합
+3. 다음 봉 HA 종가 vs 시가 기준 이진 라벨
+4. 날짜로 구간 분할 후 시퀀스 윈도우·정규화·학습 (`src/train.py`)
+5. Optuna로 검증 F1 기준 튜닝 (`src/optimize.py`)
 
-### End-to-End 흐름 (Mermaid)
+### End-to-End 흐름
 
-```mermaid
-flowchart LR
-  A[yfinance 다운로드] --> B[CSV raw 저장]
-  B --> C[HA + TA 피처]
-  C --> D[master_features CSV]
-  D --> E[BiGRU+Attention 학습]
-  D --> F[Optuna 튜닝]
-```
+Figma로 그릴 **전체 도식** 은 아래 대화에 정리한 블록과 화살표를 참고하면 된다. 내보낸 PNG는 `docs/pipeline.png` 등으로 두고 아래처럼 넣을 수 있다.
 
-> 정적 다이어그램을 쓰려면 Figma 등에서 내본 이미지를 `docs/pipeline.png` 등으로 두고 README에 삽입하면 된다.
+<p align="center">
+  <img src="./docs/figures/prediction_vs_actual_demo.png" alt="예측 vs 실제 라벨 데모" width="92%" />
+</p>
+
+> 위 그림은 **BiGRU가 아닌** 데모용 RandomForest로, 프로젝트와 **동일한 HA 라벨 정의** 만 맞춘 예측·실제 비교다. 학습된 신경망 추론 곡선으로 바꾸려면 평가 스크립트에서 저장한 `Date`, `Label`, `pred` 컬럼을 넣어 같은 형식으로 그리면 된다.
 
 ---
 
-## 4. 주요 엔지니어링 포인트 (Engineering Points)
+## 4. 엔지니어링 포인트
 
-### 4.1. 데이터 소스와 재수집
+### 4.1. 데이터 소스
 
-- **문제:** 과거에는 일부 소스에서 크롤링/API가 불안정하거나 제한되는 경우가 있었다.
-- **해결:** 현재 파이프라인은 **Yahoo Finance를 경유하는 `yfinance`**로 일별 OHLCV를 받아온다. 재현을 위해 기간·티커는 `configs/config.yaml`에서 관리한다.
-- **구현:** `src/1_data_download.py`, `configs/config.yaml` (`data.start_date`, `data.end_date`, `data.tickers`).
+- `yfinance`는 Yahoo Finance 비공식 경로에 의존한다. 장기 운용 시 소스 교체·검증이 필요할 수 있다.
+- **새 데이터가 필요하면** 아래 [데이터 요청 시](#데이터-요청-시-제공해-주실-것) 을 채워 요청해 달라. 저장소에 없는 형식·유료 피드는 사용자가 파일을 주시면 파이프라인에 맞게 연결하는 방향이 안전하다.
 
 ### 4.2. 시계열 누수 방지
 
-- **문제:** 무작위 셔플·미래 정보 혼입은 금융 시계열에서 치명적이다.
-- **해결:** `training.train_end_date`, `validation_end_date`로 구간을 나누고, 윈도우 시퀀스는 각 구간 내에서만 생성한다.
+- `training.train_end_date`, `validation_end_date`로 구간을 자르고, 윈도우는 구간 안에서만 만든다.
 
-### 4.3. 설정 단일화
+### 4.3. 설정
 
-- **문제:** 설정 파일이 중복·깨지면 실험이 재현되지 않는다.
-- **해결:** `configs/config.yaml` 한 곳에서 데이터·모델·학습·출력 경로를 정의하고, 스크립트는 프로젝트 루트 기준으로 이 파일을 읽는다.
+- `configs/config.yaml` 한 파일에서 데이터·모델·경로를 관리한다.
+
+---
+
+## 데이터 요청 시 제공해 주실 것
+
+아래를 알려주시면, 필요한 경우 그에 맞춰 전처리 스키마나 import 스크립트를 제안하겠다.
+
+| 항목 | 설명 |
+|------|------|
+| **형식** | CSV 권장. 컬럼명·날짜 형식(예: `YYYY-MM-DD`), 타임존(일봉이면 거래일 기준). |
+| **최소 컬럼** | 일봉이면 `Date`, `Open`, `High`, `Low`, `Close`, `Volume`(없으면 명시). |
+| **피처** | 이미 계산된 지표가 있으면 컬럼명과 의미(예: RSI 14일). 없으면 원천 OHLCV만으로도 가능하다. |
+| **데이터 소스** | 예: 브로커 API, 유료 벤더, 직접 크롤링 허용 여부·이용약관. |
+
+**지금 당장 추가 파일이 없으면** `configs/config.yaml`의 `start_date` / `end_date`만 조정한 뒤 `python src/1_data_download.py`로 갱신하는 흐름을 쓰면 된다.
 
 ---
 
 ## 5. 실행 방법
 
-저장소 루트에서 실행한다 (`python` 경로에 프로젝트 루트가 잡히도록).
-
 ```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-
 pip install -r requirements.txt
 
 python src/1_data_download.py
@@ -100,32 +99,19 @@ python src/train.py
 python src/optimize.py
 ```
 
-- **설정 변경**: `configs/config.yaml`에서 `data.end_date`를 오늘에 가깝게 올리면 **최신 구간까지 다시 내려받기**가 가능하다. 학습 구간 분할(`train_end_date` 등)도 새 데이터에 맞게 조정하는 것이 좋다.
-- **피처 산출물**: `data.processed_path` 아래 `master_file`(기본 `master_features_SPY.csv`)에 저장된다. Optuna는 `master_features_{optimization_target}.csv`를 읽는다.
+예측·실제 비교 **데모 이미지** 재생성:
+
+```bash
+pip install pandas numpy yfinance matplotlib scikit-learn
+python scripts/plot_prediction_vs_actual_demo.py
+```
+
+출력: `docs/figures/prediction_vs_actual_demo.png`
 
 ---
 
-## 6. 데모 (Demo)
+## 6. 팀
 
-| 항목 | 경로 |
-|------|------|
-| 원시 시계열 (다운로드 후) | `data/raw/` |
-| 가공 피처 | `data/processed/` (설정의 `master_file`) |
-| 실험 로그·요약 (기존 산출물) | `output/` |
-
----
-
-## 7. Acknowledgements
-
-- 시세 데이터: [yfinance](https://github.com/ranaroussi/yfinance) (Yahoo Finance 비공식 API)
-- 딥러닝: [PyTorch](https://pytorch.org/)
-- 하이퍼파라미터 탐색: [Optuna](https://optuna.org/)
-- 기술적 지표: [ta](https://github.com/bukosabino/ta)
-
----
-
-## 8. Team
-
-| Name |
+| 이름 |
 |------|
 | jsm0308 (개인 프로젝트) |
