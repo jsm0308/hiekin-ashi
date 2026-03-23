@@ -12,6 +12,10 @@
 
 **Heikin-Ashi 계산식**
 
+<p align="center">
+  <img src="./docs/figures/OHLC.jpg" alt="OHLC Bar 구조" width="55%" />
+</p>
+
 ```
 HA_Close = (Open + High + Low + Close) / 4
 HA_Open  = (전봉 HA_Open + 전봉 HA_Close) / 2
@@ -78,7 +82,7 @@ HA_Low   = min(Low,  HA_Open, HA_Close)
 
 ### 4.1. 클래스 불균형 대응 및 Loss 가중치 최적화
 
-**문제:** 시장 상황에 따라 상승/하락 빈도가 비대칭적으로 나타나 모델이 다수 클래스로 편향(Bias)될 위험이 있습니다.
+**문제:** 시장 상황에 따라 상승/하락 빈도가 비대칭적으로 나타나 모델이 다수 클래스로 편향될 위험이 있습니다.
 
 **해결:** `compute_class_weight('balanced')`를 통해 각 클래스 비율의 역수를 계산하여 Weighted CrossEntropyLoss를 적용합니다.
 
@@ -86,11 +90,11 @@ HA_Low   = min(Low,  HA_Open, HA_Close)
 
 ### 4.2. Heikin-Ashi 기반 노이즈 제거 및 지표 안정화
 
-**문제:** 일반 OHLCV 데이터는 시장의 미세한 노이즈가 많아 기술적 지표의 골든/데드크로스 신호가 빈번하게 왜곡됩니다.
+**문제:** 일반 OHLCV 데이터는 시장의 미세한 노이즈가 많아 기술적 지표의 골든/데드 크로스 신호가 빈번하게 왜곡됩니다.
 
 **해결:** 원본 가격 계열을 Heikin-Ashi 캔들로 변환한 후, 이를 기반으로 `ta` 라이브러리의 지표(RSI, MACD 등)를 산출합니다.
 
-**효과:** 가격 평활화(Smoothing) 효과를 통해 지표의 추세 지속성을 높였으며, 딥러닝 모델이 보다 명확한 방향성 패턴을 학습할 수 있는 환경을 조성했습니다.
+**효과:** 가격 smoothing 효과를 통해 지표의 추세 지속성을 높였으며, 딥러닝 모델이 보다 명확한 방향성 패턴을 학습할 수 있는 환경을 조성했습니다.
 
 ### 4.3. 거시 환경 맥락을 반영한 Intermarket 피처 설계
 
