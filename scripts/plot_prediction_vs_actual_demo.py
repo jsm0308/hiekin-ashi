@@ -87,54 +87,44 @@ def main():
 
     dates = test_df["Date"].values
     actual = y_test.values
-    match = pred == actual
+    close = test_df["Close"].values
 
-    fig, axes = plt.subplots(2, 1, figsize=(12, 6), gridspec_kw={"height_ratios": [1.1, 1]})
+    fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(14, 4), sharey=False)
     fig.suptitle(
-        "Demo: test split — actual label (up=1) vs model (RandomForest; same HA label as project)",
-        fontsize=11,
+        "Actual vs Predicted — SPY next-bar direction (Up=1 / Down=0)",
+        fontsize=12,
     )
 
-    # 상단: 종가 + 맞춤/틀림 배경
-    ax0 = axes[0]
-    ax0.plot(test_df["Date"], test_df["Close"], color="#333", lw=1, label="SPY Close")
-    for i in range(len(test_df)):
-        c = "#c8e6c9" if match[i] else "#ffcdd2"
-        ax0.axvspan(
-            dates[i] - np.timedelta64(12, "h"),
-            dates[i] + np.timedelta64(12, "h"),
-            color=c,
-            alpha=0.35,
-            zorder=0,
-        )
-    ax0.set_ylabel("Price")
-    ax0.legend(loc="upper left")
+    # 왼쪽: 실제 라벨 (종가 컬러 구분)
+    colors_actual = ["#1565c0" if v == 1 else "#c62828" for v in actual]
+    ax0.bar(dates, close, color=colors_actual, width=1.5, alpha=0.7)
+    ax0.set_title("Actual Label")
+    ax0.set_ylabel("SPY Close Price")
     ax0.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-    ax0.grid(True, alpha=0.3)
+    ax0.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
+    plt.setp(ax0.xaxis.get_majorticklabels(), rotation=30, ha="right")
+    ax0.grid(True, alpha=0.25, axis="y")
 
-    # 하단: 실제 vs 예측 (0/1 스텝)
-    ax1 = axes[1]
-    x_num = mdates.date2num(test_df["Date"])
-    ax1.step(x_num, actual, where="mid", color="#1565c0", lw=1.2, label="Actual")
-    ax1.step(x_num, pred, where="mid", color="#e65100", lw=1, alpha=0.85, label="Predicted")
-    ax1.scatter(
-        x_num[~match],
-        pred[~match],
-        color="crimson",
-        s=22,
-        zorder=5,
-        label="Mismatch",
-    )
-    ax1.set_ylim(-0.15, 1.15)
-    ax1.set_yticks([0, 1])
-    ax1.set_yticklabels(["Down (0)", "Up (1)"])
-    ax1.set_ylabel("Binary label")
+    # 오른쪽: 예측 라벨 (종가 컬러 구분)
+    colors_pred = ["#1565c0" if v == 1 else "#c62828" for v in pred]
+    ax1.bar(dates, close, color=colors_pred, width=1.5, alpha=0.7)
+    ax1.set_title("Predicted Label")
+    ax1.set_ylabel("SPY Close Price")
     ax1.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-    ax1.legend(loc="upper right", fontsize=8)
-    ax1.grid(True, alpha=0.3)
+    ax1.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
+    plt.setp(ax1.xaxis.get_majorticklabels(), rotation=30, ha="right")
+    ax1.grid(True, alpha=0.25, axis="y")
 
-    plt.xlabel("Date")
-    plt.tight_layout()
+    # 범례 (fig 공유)
+    from matplotlib.patches import Patch
+    legend_elements = [
+        Patch(facecolor="#1565c0", alpha=0.7, label="Up (1)"),
+        Patch(facecolor="#c62828", alpha=0.7, label="Down (0)"),
+    ]
+    fig.legend(handles=legend_elements, loc="lower center", ncol=2, fontsize=9,
+               bbox_to_anchor=(0.5, -0.02))
+
+    plt.tight_layout(rect=[0, 0.05, 1, 1])
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"저장: {out_path}")
