@@ -37,6 +37,10 @@ HA_Low   = min(Low,  HA_Open, HA_Close)
 
 `yfinance`로 OHLCV를 받아 CSV에 저장하고, SPY 기준 HA 변환, `ta` 지표/VIXY/TLT/GLD 등 피처를 만든 뒤 BiGRU+Attention으로 분류한다. 하이퍼파라미터는 Optuna로 탐색한다.
 
+<p align="center">
+  <img src="./docs/figures/prediction_vs_actual_demo.png" alt="예측 vs 실제 라벨 데모" width="92%" />
+</p>
+
 ### 피처 목록
 
 | 분류 | 피처명 | 설명 |
@@ -73,7 +77,7 @@ HA_Low   = min(Low,  HA_Open, HA_Close)
 ### End-to-End 흐름
 
 <p align="center">
-  <img src="./docs/figures/prediction_vs_actual_demo.png" alt="예측 vs 실제 라벨 데모" width="92%" />
+  <img src="./docs/figures/Heikin-Ashi.png" alt="Heikin-Ashi 파이프라인" width="92%" />
 </p>
 
 ---
