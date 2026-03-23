@@ -13,7 +13,7 @@
 **Heikin-Ashi 계산식**
 
 <p align="center">
-  <img src="./docs/figures/OHLC.jpg" alt="OHLC Bar 구조" width="55%" />
+  <img src="./docs/figures/OHLC.jpg" alt="OHLC Bar 구조" width="35%" />
 </p>
 
 ```
@@ -130,4 +130,4 @@ HA_Low   = min(Low,  HA_Open, HA_Close)
 
 | 이름 |
 |------|
-| jsm0308 (개인 프로젝트) |
+| 장승민 (개인 프로젝트) |
