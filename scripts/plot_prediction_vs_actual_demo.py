@@ -55,6 +55,12 @@ def cumulative_return(signal: np.ndarray, daily_ret: np.ndarray) -> np.ndarray:
     return (1 + strategy_ret).cumprod()
 
 
+def drawdown(cum: np.ndarray) -> np.ndarray:
+    """누적 수익률 시계열의 낙폭(peak 대비 하락률) 계산."""
+    peak = np.maximum.accumulate(cum)
+    return (cum / peak) - 1.0
+
+
 def main():
     out_dir = os.path.join(ROOT, "docs", "figures")
     os.makedirs(out_dir, exist_ok=True)
@@ -97,19 +103,38 @@ def main():
     # Buy & Hold 기준선
     cum_bh = (1 + daily_ret).cumprod()
 
-    fig, ax = plt.subplots(figsize=(12, 5))
-    ax.plot(dates, cum_bh,    color="#9e9e9e", lw=1,   linestyle="--", label="Buy & Hold")
-    ax.plot(dates, cum_actual, color="#1565c0", lw=1.5, label="Actual label strategy")
-    ax.plot(dates, cum_pred,   color="#e65100", lw=1.5, label="Predicted label strategy")
+    # 성능을 과장하지 않도록 전체 범위를 유지하면서, 로그 스케일로
+    # 상대적 성장률 차이를 읽기 쉽게 표현한다.
+    dd_bh = drawdown(cum_bh)
+    dd_actual = drawdown(cum_actual)
+    dd_pred = drawdown(cum_pred)
 
-    ax.set_title("Cumulative Return — Actual vs Predicted (test split, demo: RandomForest)", fontsize=11)
-    ax.set_ylabel("Cumulative Return (start = 1.0)")
-    ax.set_xlabel("Date")
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
-    plt.setp(ax.xaxis.get_majorticklabels(), rotation=30, ha="right")
-    ax.legend(fontsize=9)
-    ax.grid(True, alpha=0.3)
+    fig, (ax1, ax2) = plt.subplots(
+        nrows=2, ncols=1, figsize=(12, 7), sharex=True, gridspec_kw={"height_ratios": [3, 2]}
+    )
+
+    ax1.plot(dates, cum_bh, color="#9e9e9e", lw=1, linestyle="--", label="Buy & Hold")
+    ax1.plot(dates, cum_actual, color="#1565c0", lw=1.5, label="Actual label strategy")
+    ax1.plot(dates, cum_pred, color="#e65100", lw=1.5, label="Predicted label strategy")
+    ax1.set_yscale("log")
+    ax1.set_title(
+        "Cumulative Return (log scale) — Actual vs Predicted (test split, demo: RandomForest)",
+        fontsize=11,
+    )
+    ax1.set_ylabel("Cumulative Return (start = 1.0, log)")
+    ax1.legend(fontsize=9, loc="upper left")
+    ax1.grid(True, alpha=0.3, which="both")
+
+    ax2.plot(dates, dd_bh, color="#9e9e9e", lw=1, linestyle="--", label="Buy & Hold drawdown")
+    ax2.plot(dates, dd_actual, color="#1565c0", lw=1.5, label="Actual drawdown")
+    ax2.plot(dates, dd_pred, color="#e65100", lw=1.5, label="Predicted drawdown")
+    ax2.axhline(0.0, color="#666666", lw=0.8, alpha=0.7)
+    ax2.set_ylabel("Drawdown")
+    ax2.set_xlabel("Date")
+    ax2.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
+    ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+    plt.setp(ax2.xaxis.get_majorticklabels(), rotation=30, ha="right")
+    ax2.grid(True, alpha=0.3)
 
     plt.tight_layout()
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
