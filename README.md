@@ -13,7 +13,7 @@
 **Heikin-Ashi 계산식**
 
 <p align="center">
-  <img src="./docs/figures/OHLC.jpg" alt="OHLC Bar 구조" width="55%" />
+  <img src="./docs/figures/OHLC.jpg" alt="OHLC Bar 구조" width="35%" />
 </p>
 
 ```
